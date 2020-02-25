@@ -1,11 +1,11 @@
-hs.window.animationDuration = 0.2
+hs.window.animationDuration = 0
 
 hyper = {"ctrl", "alt", "cmd"}
 hypershift = {"ctrl", "alt", "cmd", "shift"}
 
 TERMINAL = "Hyper"
 GRID = {
-  w = 2,
+  w = 3,
   h = 2
 }
 GRID_MARGIN = {
