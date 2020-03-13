@@ -6,13 +6,12 @@ local pressed = {
 }
 
 hs.hotkey.bind(hyper, "return", function ()
-  for k,v in pairs(hs.application.runningApplications()) do
-    if v:name() ~= nil and string.find(v:name(), TERMINAL) ~= nil then
-      v:selectMenuItem({"Shell", "New Window"})
-      return
-    end
+  local a = hs.application.find(TERMINAL)
+  if a ~= nil then
+    a:selectMenuItem({"Shell", "New Window"})
+  else
+    hs.application.open(TERMINAL)
   end
-  hs.application.open(TERMINAL)
 end)
 
 hs.hotkey.bind(hypershift, "up", function ()
