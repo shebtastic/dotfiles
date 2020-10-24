@@ -1,7 +1,7 @@
 hs.window.animationDuration = 0
 
 hyper = {"ctrl", "alt", "cmd"}
-hypershift = {"ctrl", "alt", "cmd", "shift"}
+ultra = {"ctrl", "alt", "cmd", "shift"}
 
 TERMINAL = "Hyper"
 GRID = {
