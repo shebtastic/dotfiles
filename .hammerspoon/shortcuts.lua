@@ -6,7 +6,7 @@ local pressed = {
 }
 
 hs.hotkey.bind(hyper, "return", function ()
-  local a = hs.application.find(TERMINAL)
+  local a = hs.application.get(TERMINAL)
   if a ~= nil then
     a:selectMenuItem({"Shell", "New Window"})
   else
@@ -56,6 +56,10 @@ hs.hotkey.bind(ultra, "right", function ()
   end
 end, function () 
   pressed.right = false
+end)
+
+hs.hotkey.bind(ultra, "s", function ()
+  hs.caffeinate.lockScreen()
 end)
 
 hs.hotkey.bind(ultra, "f", function ()

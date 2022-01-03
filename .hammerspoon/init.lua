@@ -1,6 +1,6 @@
 hs.window.animationDuration = 0
 
-hyper = {"ctrl", "alt", "cmd"}
+hyper = {"ctrl", "alt", "shift"}
 ultra = {"ctrl", "alt", "cmd", "shift"}
 
 TERMINAL = "Hyper"
