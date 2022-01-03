@@ -4,24 +4,7 @@
 
 module.exports = {
   config: {
-    MaterialTheme: {
-      // Set the theme variant,
-      // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
-      theme: '',
-  
-      // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
-      // OPTIONS: From 0.1 to 1
-      backgroundOpacity: '1',
-  
-      // [Optional] Set the accent color for the current active tab
-      accentColor: '#64FFDA',
-  
-      // [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
-      // OPTIONS: 'dark', 'ultra-dark', 'bright'
-      // NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
-      vibrancy: 'bright'
-    },
-  
+    scrollback: 25000,
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
@@ -45,13 +28,13 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: '#FFCC00',
+    cursorColor: 'rgba(248,28,229,0.8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'UNDERLINE',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: false,
@@ -61,10 +44,10 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: '#dedede',
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
 
     // terminal selection color
-    selectionColor: 'rgba(255,204,0,0.3)',
+    selectionColor: 'rgba(248,28,229,0.3)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -73,7 +56,7 @@ module.exports = {
     css: '',
 
     // custom CSS to embed in the terminal window
-    termCSS: 'span { background-color: black !important; }',
+    termCSS: '',
 
     // if you're using a Linux setup which show native menus, set to false
     // default: `true` on Linux, `true` on Windows, ignored on macOS
@@ -164,7 +147,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-solarized-light"],
+  plugins: [],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
