@@ -14,6 +14,24 @@ hs.hotkey.bind(hyper, "return", function ()
   end
 end)
 
+hs.hotkey.bind(hyper, "b", function ()
+  function jitter()
+    hs.mouse.setRelativePosition(hs.geometry(hs.math.randomFromRange(5,25),hs.math.randomFromRange(5,25)))
+  end
+  modes.jitter = not modes.jitter
+  local timer = hs.timer.doUntil(
+    function()
+      return not modes.jitter
+    end,
+    function()
+      if modes.jitter then
+        jitter()
+      end
+    end,
+    1
+  )
+end)
+
 hs.hotkey.bind(ultra, "up", function ()
   pressed.up = true
   if pressed.down then 
